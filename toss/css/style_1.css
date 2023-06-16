@@ -1,0 +1,178 @@
+.navbar{
+    background-color: white;
+    border-bottom: none;  
+    
+}
+.navbar a {
+    color: #425968 !important;
+}
+.navbar-brand{
+    position: absolute;
+    top:-17px !important;
+}
+#main{
+    width:100%;
+    height:1080px;
+    background-image: url(../img/new_main.png);
+    
+    padding: 0;
+    
+}
+#main h1{
+    text-align: center;
+    font-size: 60px;
+    color: black;
+    /* margin-top: 100px; */
+    padding-top: 250px;
+    font-weight: 900;
+     
+    background: linear-gradient(180deg, white 0%, white 59px, rgba(255, 255, 255, 0) 100%);
+}
+#main div{
+    text-align: center; 
+
+    margin-top: 50px;
+}
+#main img{
+    width: 24px;
+    height: 24px;
+}
+#main a{
+    display: inline-block;
+    width:150px;
+    height: 40px;
+    background: #192C41;
+    border-radius: 7px;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    padding-top:10px;   
+    
+    opacity: 0.9;
+    text-decoration: none;
+    
+}
+
+#catch{
+    width:100%;
+    height:600px;
+    background: #F9FAFB;
+    padding:250px 0;
+    
+}
+#catch h2{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 50px !important;
+}
+#home{
+    height: 1300px;
+}
+#home h2,
+#send h2{
+    color:#3182F6;
+    font-weight: bold;
+}
+#home h3,
+#send h3{
+    font-weight: bold;
+    font-size: 40px;
+}
+#send span{
+    color:#3182F6;
+    font-weight: bold;
+    font-size: 20px;
+}
+#send .txt1{
+    font-size: 35px;
+    font-weight: bold;
+}
+#send .txt2{
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+}
+#box1,#box4{
+    position: relative;
+    height: 300px !important;
+}
+#box2,#box3{
+    position: relative;
+    height: 887px !important;    
+}
+.pic01{
+    width:57%;
+    top:11%;
+    left: 22%;
+    position: absolute;
+ 
+}
+.pic02{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+}
+#send{
+    width:100%;
+    height:1500px;
+    background: #F9FAFB;
+}
+#bespoke h1{
+    font-size: 60px;
+    font-weight: 900;
+}
+#business{
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.pic03, .pic04{
+    width:100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+
+}
+#box6 .col-sm-6, 
+#box7 .col-sm-6,
+#box8 .col-sm-6{
+    height: 384px;
+}
+#bespoke .col-sm-8{
+    height: 838px;
+}
+.pic05{
+    width:90%;
+    height: 336px;
+}
+#business{
+    background: black;
+}
+.pic06{
+    width: 100%;   
+}
+#business .btn{
+    background: #3182F6;
+    color: #f9f8fb;
+}
+footer{
+    background: #191F28;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    color: #6B7678;
+}
+
+
+
+@media screen and (max-width:767px) {
+    #main{
+        background-position: center;
+    }
+    
+}
