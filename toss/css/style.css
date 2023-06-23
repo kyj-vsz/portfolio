@@ -1,6 +1,9 @@
 .navbar{
     background-color: #fff;
-    border-bottom: none;
+    border-bottom: none;    
+}
+.underline{
+    border-bottom: 1.5px solid #ddd;
 }
 .navbar a{
     color:#4E5968;
@@ -8,6 +11,7 @@
 .navbar-brand{
     position: absolute;
     top:-1px !important;
+    background-origin: padding-box;
 }
 #main{
     width:100%;

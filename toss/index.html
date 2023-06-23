@@ -5,13 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>토스</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="https://static.toss.im/tds/favicon/favicon-32x32.png"/>
-    
+    <link rel="icon" type="image/png" sizes="32x32" href="https://static.toss.im/tds/favicon/favicon-32x32.png"/>    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        $(document).ready(function(){
+            console.log($(document).height());
+            console.log($(".navbar").height());
+            $(window).scroll(function(){
+                console.log($(window).scrollTop());
+                if($(window).scrollTop()>50){
+                    $(".navbar").addClass("underline");
+                }else if($(window).scrollTop()<50){
+                    $(".navbar").removeClass("underline");
+                }
+                 if($(window).scrollTop()>900){
+                    $("#home h2").addClass("animate__animated").addClass("animate__fadeInUp");                    
+                    $("#box1 h3").addClass("animate__animated").addClass("animate__fadeInUp");                    
+                }
+                 if($(window).scrollTop()>1000){
+                    $("#box3").addClass("animate__animated").addClass("animate__fadeInUp");                                    
+                }
+                 if($(window).scrollTop()>1400){
+                    $("#box2").addClass("animate__animated").addClass("animate__fadeInUp");                                     
+                }
+                 if($(window).scrollTop()>1900){
+                    $("#box4").addClass("animate__animated").addClass("animate__fadeInUp");                                      
+                }
+                 if($(window).scrollTop()>2300){
+                    $("#box5 h2").addClass("animate__animated").addClass("animate__fadeInUp");                    
+                    $("#box5 h3").addClass("animate__animated").addClass("animate__fadeInUp");                    
+                }
+                 if($(window).scrollTop()>2400){
+                    $("#box6 span").addClass("animate__animated").addClass("animate__fadeInUp");                    
+                    $("#box6 .txt1").addClass("animate__animated").addClass("animate__fadeInUp");                    
+                    $("#box6 .txt2").addClass("animate__animated").addClass("animate__fadeInUp");                                      
+                    $("#box6 .pic03").addClass("animate__animated").addClass("animate__fadeInUp").addClass("animate__delay-1s");                    
+                }
+                 if($(window).scrollTop()>2900){
+                    $("#box7 span").addClass("animate__animated").addClass("animate__fadeInUp");                    
+                    $("#box7 .txt1").addClass("animate__animated").addClass("animate__fadeInUp");                    
+                    $("#box7 .txt2").addClass("animate__animated").addClass("animate__fadeInUp");                                      
+                    $("#box7 .pic03").addClass("animate__animated").addClass("animate__fadeInUp").addClass("animate__delay-1s");              
+                }
+                 if($(window).scrollTop()>3300){
+                    $("#box8 span").addClass("animate__animated").addClass("animate__fadeInUp");                    
+                    $("#box8 .txt1").addClass("animate__animated").addClass("animate__fadeInUp");                    
+                    $("#box8 .txt2").addClass("animate__animated").addClass("animate__fadeInUp");                                      
+                    $("#box8 .pic03").addClass("animate__animated").addClass("animate__fadeInUp").addClass("animate__delay-1s");             
+                }
+                 if($(window).scrollTop()>4700){
+                    $("#bespoke .pic04").addClass("animate__animated").addClass("animate__fadeInLeft");                    
+                    $("#bespoke .pic05").addClass("animate__animated").addClass("animate__fadeInRight");                    
+                }
+                 
+            });
+
+            
+        });
+    </script>
 </head>
 <body>
     <!-- navigation  ------------------------------------------------------------------------------------->
@@ -38,8 +93,8 @@
               <li><a href="#">|</a></li>         
               <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in">ENG</a></li>         
             </ul>
-          </div>
         </div>
+    </div>
       </nav>
     <!-- navigation end -->
     <!-- Main Image--------------------------------------------------------------------------------------->
