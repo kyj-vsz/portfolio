@@ -101,6 +101,9 @@
     font-weight:bold;
     color:gray;
 }
+.comment{
+    padding-top:50px !important;
+}
 /* 번외 */
 #box1,#box4{
     position: relative;
@@ -109,6 +112,10 @@
 #box2,#box3{
     position: relative;
     height: 887px !important;    
+}
+#box4 h3{
+    font-size:23px;
+    line-height:35px;
 }
 .pic01{
     width:57%;
@@ -131,13 +138,27 @@
     height:1500px;
     background-color: #F9FAFB;
     position:relative;
+    display: block;
+}
+#send_m{
+    display: none;
 }
 /* 1번 */
+#bespoke{
+    padding-top:150px;
+    padding-bottom:150px;
+    display: block;
+}
+#bespoke_m{
+    display: none;
+}
+#bespoke_m .content{
+    width:50%;
+}
 #bespoke .head{
     font-size:60px;
     font-weight:900;
-    padding-top:200px;
-    padding-bottom:200px;
+    padding-bottom:100px;
 }
 /* 1번 */
 /* 2번 */
@@ -149,6 +170,10 @@
 }
 /* 2번 */
 /* 3번 */
+#bespoke h2{
+    font-size: 35px;
+    font-weight: 900;
+}
 #bespoke .foot{
     padding-top:100px;
     padding-bottom:100px;
@@ -182,10 +207,6 @@
     height: 384px;
 }
 #bespoke .col-sm-8{
-    height:838px;
-}
-#bespoke .col-sm-4{
-    padding-top:150px;
     height:838px;
 }
 .pic05{
@@ -242,7 +263,6 @@ footer{
     color:#6B7684;
 }
 footer .col-sm-2, .col-sm-6{
-    
     font-size:15px;
     line-height:2;
 }
@@ -263,6 +283,12 @@ footer h4{
 footer p{
     font-size:13px;
     color:#B0B8C1;
+}
+footer ul li:nth-child(1){
+    font-weight: bold;
+}
+footer li{
+    padding : 5px;
 }
 /* 5번 */
 @media screen and (max-width:767px){
@@ -302,11 +328,84 @@ footer p{
     #box3{
         display:none;
     }
-    
+    #box4 h3{
+        font-size: 19px !important;
+    }    
     #box5, #box6{
         float:left;        
     }
     #box7, #box8{
         float:right;
+    }
+    #home{
+        height:1500px;
+    }
+    #bespoke{
+        display: none;
+    }
+    #bespoke_m{
+        display: block;
+    }
+    #bespoke_m .content{
+        width:50%;
+    }
+    #send{
+        display: none;
+    }
+    #send_m{
+        display: block;
+        width:100%;
+        height:2300px;
+        background: #F9FAFB;
+    }
+    #send_m span{
+        color:#3182F6;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    #send_m .txt1{
+        font-size: 20px !important;
+        font-weight: bold;
+    }
+    #send_m .txt2{
+        font-size: 17px !important;
+        font-weight: bold;
+        color: #4B5460;
+    }
+    #box9 .col-sm-6,
+    #box10 .col-sm-6,
+    #box11 .col-sm-6,
+    #box12 .col-sm-6{
+        height: 384px;
+    }
+    #box9 .comment,
+    #box10 .comment,
+    #box11 .comment,
+    #box12 .comment{
+        height:270px;
+    }
+    #business{
+        height:2300px;
+    }
+    #business .col-sm-3{
+        height: 250px !important;
+        margin-bottom: 100px !important;
+    }
+    #business .col-sm-3 h3{
+        height: 120px !important;
+    }
+    .pic01{
+        width:57% !important;
+        height:70% !important;
+        top:11% !important;
+        left:22% !important;
+        position: absolute !important;
+    }
+    .pic02{
+        width: 100% !important;
+        height:100% !important;
+        top:0% !important;
+        left:0% !important;
+        position: absolute !important;
     }
 }
