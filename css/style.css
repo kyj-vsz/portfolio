@@ -1,0 +1,36 @@
+*{
+    margin :0;
+    padding :0;
+}
+#top{
+    width: 100%;
+    height: 600px;
+}
+#navi{
+    position: fixed;
+    right: 0;
+}
+#box1,#box2{
+    /* background-color: blue; */
+    width:100%;
+    height: 540px;
+    text-align: center;
+}
+.col-sm-4{
+    /* background-color: navy; */
+    width: 100%;
+    float:left;
+    border: 1px solid #000; 
+}
+.depth{
+    /* position: absolute; */
+    text-align: center;
+    width:434px;
+    height:486px;
+    background-color: indigo;
+    opacity:0.6;
+    display:none;
+}
+#gdemo a:hover .depth{
+    display:block;
+}

@@ -4,12 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    <h1>Portfolio</h1>
-    <h1>글로벌 IT 데모</h1>
-    <a href="https://kyj-vsz.github.io/portpolio/globalit/" target="_blank">Global IT</a>    
-    <h1>Toss 데모</h1>
-    <a href="https://kyj-vsz.github.io/portpolio/toss/" target="_blank">Toss</a>
+	<nav id="navi">
+		<ul class="nav nav-pills justify-content-end">
+			<li class="nav-item">
+			  <a class="nav-link active" href="#">Main</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="">Waiting</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#port">Portfolio</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link disabled" href="#">Disabled</a>
+			</li>
+		  </ul>
+	</nav>
+	<div id="top" class="container-fluid">
+		<h1>환영합니다! 임시개발페이지 입니다. </h1>
+	</div>
+    <h1 id="port"><a href="#" style="text-decoration: none; color: #000">Portfolio</a></h1>
+    <div id="box1" class="container-fluid">
+        <div id="gdemo" class="col-sm-4">
+			<h1>글로벌 IT 데모</h1>
+			<a href="https://kyj-vsz.github.io/portpolio/globalit/" target="_blank">
+				<img src="img/demo_img_git.png"/>
+			</a>    
+			<p>
+				<a href="https://kyj-vsz.github.io/portpolio/globalit/" target="_blank">Global IT</a>    
+			</p>
+			<div class="depth">
+				<h4>Technologies</h4>
+				<h4>CSS, Boostrap, JavaScript</h4>
+			</div>
+		</div>
+        <div id="tdemo" class="col-sm-4">
+			<h1>Toss 데모</h1>
+			<a href="https://kyj-vsz.github.io/portpolio/toss/" target="_blank">
+				<img src="img/demo_img_toss.png"/>
+			</a>
+			<p>
+				<a href="https://kyj-vsz.github.io/portpolio/toss/" target="_blank">Toss</a>
+			</p>
+			<div class="depth">
+				
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<h1>데모</h1>
+			<a href="" target="_blank">DIABLO 4</a>
+		</div>
+    </div>
+	<div id="box2" class="container">
+		<div class="col-sm-4">
+			<h1>추가예정</h1>
+		</div>
+		<div class="col-sm-4">
+			<h1>추가예정</h1>
+		</div>
+		<div class="col-sm-4">
+			<h1>추가예정</h1>
+		</div>
+	</div>
+    <footer>
+		<p align="center">공사중입니다.</p>
+		<h5 align="center">이 웹사이트는 1920 * 1080이 매우 권장됩니다. </h5>
+	</footer>
 </body>
 </html>
