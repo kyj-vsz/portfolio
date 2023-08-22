@@ -8,6 +8,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://kit.fontawesome.com/f0a22c7bfb.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
@@ -23,7 +24,7 @@
 			  <a class="nav-link" href="#port">Portfolio</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link disabled" href="#">Disabled</a>
+			  <a class="nav-link disabled" href="#"><i class="fa-brands fa-x-twitter"></i></a>
 			</li>
 		  </ul>
 	</nav>
@@ -32,34 +33,49 @@
 	</div>
     <h1 id="port"><a href="#" style="text-decoration: none; color: #000">Portfolio</a></h1>
     <div id="box1" class="container-fluid">
-        <div id="gdemo" class="col-sm-4">
-			<h1>글로벌 IT 데모</h1>
-			<a href="https://kyj-vsz.github.io/portpolio/globalit/" target="_blank">
-				<img src="img/demo_img_git.png"/>
+		<a href="https://kyj-vsz.github.io/portpolio/globalit/" target="_blank">
+			<div id="gdemo" class="col-sm-4">
+				<h1 style="color:#000">글로벌 IT 데모</h1>
+				<img src="img/demo_img_git.png"/>    
+				<div class="depth1">
+					<div class="tech">
+						<h4>Technologies</h4>
+						<h4>HTML5, CSS3, Boostrap3, JavaScript, JQuery</h4>
+						<h3>Go to page</h3>
+					</div>
+				</div>
+			</div>
+		</a>  
+		<a href="https://kyj-vsz.github.io/portpolio/toss/" target="_blank">
+			<div id="gdemo" class="col-sm-4">
+				<h1 style="color:#000">Toss 데모</h1>
+				<img src="img/demo_img_toss.png"/>    
+				<div class="depth1">
+					<div class="tech">
+						<h4>Technologies</h4>
+						<h4>HTML5, CSS3, Boostrap3, JQuery</h4>
+						<h4>Responsible Web(ongoing)</h4>
+						<h3>Go to page</h3>
+					</div>
+				</div>
+			</div>
+		</a>    
+		<div id="ndemo" class="col-sm-4">
+			<h1 style="color:#000">NIKE Showcase 데모</h1>
+			<img src="img/demo_img_nike.png"/>
+			<div>
+				<span>All</span> 
+			</div>
+			<a href="https://kyj-vsz.github.io/portpolio/nike/" target="_blank">
+				<div class="depth1">
+					<div class="tech">
+						<h4>Technologies</h4>
+						<h4>HTML5, CSS3, Boostrap3, JQuery</h4>
+						<h4>Responsible Web(ongoing)</h4>
+						<h3>Go to page</h3>
+					</div>
+				</div>
 			</a>    
-			<p>
-				<a href="https://kyj-vsz.github.io/portpolio/globalit/" target="_blank">Global IT</a>    
-			</p>
-			<div class="depth">
-				<h4>Technologies</h4>
-				<h4>CSS, Boostrap, JavaScript</h4>
-			</div>
-		</div>
-        <div id="tdemo" class="col-sm-4">
-			<h1>Toss 데모</h1>
-			<a href="https://kyj-vsz.github.io/portpolio/toss/" target="_blank">
-				<img src="img/demo_img_toss.png"/>
-			</a>
-			<p>
-				<a href="https://kyj-vsz.github.io/portpolio/toss/" target="_blank">Toss</a>
-			</p>
-			<div class="depth">
-				
-			</div>
-		</div>
-		<div class="col-sm-4">
-			<h1>데모</h1>
-			<a href="" target="_blank">DIABLO 4</a>
 		</div>
     </div>
 	<div id="box2" class="container">
