@@ -20,7 +20,7 @@
     /* background-color: navy; */
     width: 100%;
     float:left;
-    border: 1px solid #000; 
+    /* border: 1px solid #000;  */
 }
 #gdemo, #ndemo{
     width:100%;
@@ -53,5 +53,9 @@
 }
 #gdemo:hover h3{
    color:blue;
+}
+video{
+    width:360px;
+    height:390px;
 }
 
