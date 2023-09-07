@@ -37,6 +37,29 @@
 			}      
         }
 		setInterval(func1,50);
+
+		$(document).ready(function(){
+			$(".nav1").click(function(){
+				$(".nav-link").removeClass("active");
+				$(".nav1").addClass("active");
+			});
+			$(".nav2").click(function(){
+				$(".nav-link").removeClass("active");
+				$(".nav2").addClass("active");
+			});
+			$(".nav3").click(function(){
+				$(".nav-link").removeClass("active");
+				$(".nav3").addClass("active");
+			});
+			$(".nav4").click(function(){
+				$(".nav-link").removeClass("active");
+				$(".nav4").addClass("active");
+			});
+			$(".nav5").click(function(){
+				$(".nav-link").removeClass("active");
+				$(".nav5").addClass("active");
+			});
+		});
 	</script>
 </head>
 <body>
@@ -47,25 +70,25 @@
 		<div id="collapsiblenav" class="collapse navbar-collapse">			
 			<ul class="nav nav-pills justify-content-end">
 				<li class="nav-item">
-				  <a class="nav-link active" href="#">Main</a>
+				  <a class="nav-link nav1 active" href="#">Main</a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link" href="">Waiting</a>
+					<a class="nav-link nav2" href="#port">Toy Project</a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link" href="#port">Toy Project</a>
+					<a class="nav-link nav3" href="#team">Team Project</a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link" href="#team">Team Project</a>
+					<a class="nav-link nav4" href="#info">Infomation</a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link disabled" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+					<a class="nav-link disabled nav5" href="#"><i class="fa-brands fa-x-twitter"></i></a>
 				</li>
 			  </ul>
 		</div>
 	</nav>
 	<div id="top" class="container-fluid">
-		<h1>환영합니다! 임시소개페이지 입니다. </h1>
+		<h1>WELCOME!</h1>
 	</div>
 	<div class="container-fluid main">
 
@@ -86,7 +109,7 @@
 			</div>
 		</a>  
 		<a href="https://kyj-vsz.github.io/portpolio/toss/" target="_blank">
-			<div id="gdemo" class="col-sm-4">
+			<div id="tdemo" class="col-sm-4">
 				<h1 style="color:#000">Toss 데모</h1>
 				<img src="img/demo_img_toss.png"/>    
 				<div class="depth1">
@@ -100,7 +123,7 @@
 			</div>
 		</a>    
 		<a href="https://kyj-vsz.github.io/portpolio/nike/" target="_blank">
-			<div id="gdemo" class="col-sm-4">
+			<div id="ndemo" class="col-sm-4">
 				<h1 style="color:#000">NIKE Showcase 데모</h1>
 				<video loop autoplay muted>
 					<source src="img/nike.mp4" type="video/mp4" />
@@ -116,8 +139,17 @@
 		</a>    
     </div>
 	<div id="box2" class="container">
-		<div class="col-sm-4">
-			<h1>추가예정</h1>
+		<div id="sdemo" class="col-sm-4">
+			<h1 style="color:#000">학사관리프로그램</h1>
+			<video loop autoplay muted>
+				<source src="img/hacksatest.mp4" type="video/mp4" />
+			</video>
+			<div class="depth1">
+				<div class="tech">
+					<h4>-----------Technologies----------</h4>
+					<h4>JAVA(Swing), ORACLE(JDBC)</h4>
+				</div>
+			</div>
 		</div>
 		<div class="col-sm-4">
 			<h1>추가예정</h1>
@@ -130,16 +162,39 @@
 	<div id="box3" class="container-fluid col-sm-12">
 		<h1>추가예정</h1>
 	</div>
-	<h1>Infomation</h1>
+	<h1 id="info"><a href="#" style="text-decoration: none; color: #000">Infomation</a></h1>
 	<div id="box4" class="container-fluid col-sm-12">
 		<div id=""box4sub1 class="container">
-			<h2>WHO AM I</h2>
+			<h2>WHO IS . . . . </h2>
+			<h3>
+				<span class="col-sm-4" style="text-align: left;"><i class="fa-solid fa-user fa-sm"></i> NAME</span> 
+				<span class="col-sm-8">국윤재 (Kook Yun Jae)</span>
+			</h3>
+			<h3>
+				<span class="col-sm-4" style="text-align: left;"><i class="fa-solid fa-user-tag fa-sm"></i> A.K.A</span> 
+				<span class="col-sm-8">브이시즈(VSIZ)</span>
+			</h3>
+			<h2>CONTRACT.</h2>
+			<h3>
+				<span class="col-sm-4" style="text-align: left;"><i class="fa-solid fa-envelope fa-sm"></i> Email</span> 
+				<span class="col-sm-8">unholy3803@naver.com</span>
+			</h3>
+			<h3>
+				<span class="col-sm-4" style="text-align: left;"><i class="fa-brands fa-github fa-sm"></i> Github</span>
+				<span class="col-sm-8"><a href="https://github.com/kyj-vsz" target="_blank">https://github.com/kyj-vsz</a></span>
+			</h3>
 		</div>
 		<div id="box4sub2" class="container">
 			<h2>SKILL</h2>
-			<h3><span class="col-sm-4">FRONT END</span> <span class="col-sm-8">HTML5, CSS3, JAVASCRIPT, BOOTSTRAP, JQUERY</span></h3>
-			<h3><span class="col-sm-4">BACK END</span> <span class="col-sm-8">JAVA, JSP, SPRING, SPRING BOOT</span></h3>
-			<h3><span class="col-sm-4">DATA BASE</span> <span class="col-sm-8">ORACLE</span></h3>
+			<h3><span class="col-sm-4" style="text-align: left;"><i class="fa-solid fa-brush fa-sm"></i> FRONT END</span> 
+				<span class="col-sm-8">HTML5, CSS3, JAVASCRIPT, BOOTSTRAP, JQUERY</span>
+			</h3>
+			<h3><span class="col-sm-4" style="text-align: left;"><i class="fa-solid fa-keyboard fa-sm"></i> BACK END</span> 
+				<span class="col-sm-8">JAVA, JSP, SPRING, SPRING BOOT</span>
+			</h3>
+			<h3><span class="col-sm-4" style="text-align: left;"><i class="fa-solid fa-database fa-sm"></i> DATA BASE</span> 
+				<span class="col-sm-8">ORACLE</span>
+			</h3>
 		</div>
 	</div>
 
