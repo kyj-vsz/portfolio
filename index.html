@@ -11,7 +11,8 @@
 	<script src="https://kit.fontawesome.com/f0a22c7bfb.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Play&family=Roboto+Mono:wght@300&family=Titillium+Web:wght@300&display=swap" 
+	rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css"/>
 	<script>
 		let d = new Date();
@@ -20,19 +21,29 @@
 		console.log(m);
 
 		function func1(){
-            let tags1=document.querySelectorAll(".main");
-			for(i = 0; i < tags1.length; i++){
+            let tags1 = document.querySelectorAll(".pic1");
+            let tags2 = document.querySelectorAll(".pic2");
+            let tags3 = document.querySelectorAll(".pic3");
+			for(let i = 0; i < tags1.length; i++){
 				if(m == 3 || m == 4 || m == 5){
 					tags1[i].style.backgroundImage="url('img/sakura.jpg')";
+					tags2[i].style.backgroundImage="url('img/field.jpg')";
+					tags3[i].style.backgroundImage="url('img/purple.jpg')";					
 				}
 				if(m == 6 || m == 7 || m == 8){
 					tags1[i].style.backgroundImage="url('img/summer.jpg')";
+					tags2[i].style.backgroundImage="url('img/boat.jpg')";
+					tags3[i].style.backgroundImage="url('img/snight.jpg')";	
 				}	
 				if(m == 9 || m == 10 || m == 11){
 					tags1[i].style.backgroundImage="url('img/fall.jpg')";
+					tags2[i].style.backgroundImage="url('img/leaf.jpg')";
+					tags3[i].style.backgroundImage="url('img/moon.jpg')";	
 				}	
 				if(m == 12 || m == 1 || m == 2){
 					tags1[i].style.backgroundImage="url('img/winter.jpg')";
+					tags2[i].style.backgroundImage="url('img/wmt.jpg')";
+					tags3[i].style.backgroundImage="url('img/wcity.jpg')";	
 				}	
 			}      
         }
@@ -59,6 +70,18 @@
 				$(".nav-link").removeClass("active");
 				$(".nav5").addClass("active");
 			});
+			// Activate Carousel
+			$("#myCarousel").carousel();
+
+			// Enable Carousel Indicators
+			$(".item").click(function(){
+			$("#myCarousel").carousel(1);
+			});
+
+			// Enable Carousel Controls
+			$(".carousel-control-prev").click(function(){
+			$("#myCarousel").carousel("prev");
+			});
 		});
 	</script>
 </head>
@@ -70,7 +93,7 @@
 		<div id="collapsiblenav" class="collapse navbar-collapse">			
 			<ul class="nav nav-pills justify-content-end">
 				<li class="nav-item">
-				  <a class="nav-link nav1 active" href="#">Main</a>
+				  <a class="nav-link nav1" href="#">Main</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link nav2" href="#port">Toy Project</a>
@@ -90,8 +113,50 @@
 	<div id="top" class="container-fluid">
 		<h1>WELCOME!</h1>
 	</div>
-	<div class="container-fluid main">
-
+	<div id="demo" class="container-fluid carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ul class="carousel-indicators">
+			<li data-target="#demo" data-slide-to="0" class="active"></li>
+			<li data-target="#demo" data-slide-to="1"></li>
+			<li data-target="#demo" data-slide-to="2"></li>
+		</ul>
+		
+		<!-- The slideshow -->
+		<div class="carousel-inner">
+			<div class="carousel-item pic1 active">
+				
+			</div>
+			<div class="carousel-item pic2">
+				
+			</div>
+			<div class="carousel-item pic3">
+				
+			</div>
+		</div>
+	
+		<!-- Left and right controls -->
+		<a class="carousel-control-prev" href="#demo" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href="#demo" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+	</div>
+	<h1>WHAT IS......</h1>
+	<div id="intro" class="container-fluid">
+		<div style="padding:180px;">
+			<h3>
+				<span class="col-sm-12">
+					<i class="fa-solid fa-hand-fist fa-sm"></i>
+					Back End 지망 초보 개발자의 연습용 홈페이지 입니다.
+				</span>				
+			</h3>
+			<h3>
+				<span class="col-sm-12">
+					가볍게 구경하고 가세요~
+				</span>				
+			</h3>
+		</div>
 	</div>
     <h1 id="port"><a href="#" style="text-decoration: none; color: #000">Toy Project</a></h1>
     <div id="box1" class="container">
@@ -165,7 +230,7 @@
 	<h1 id="info"><a href="#" style="text-decoration: none; color: #000">Infomation</a></h1>
 	<div id="box4" class="container-fluid col-sm-12">
 		<div id=""box4sub1 class="container">
-			<h2>WHO IS . . . . </h2>
+			<h2>WHO AM I</h2>
 			<h3>
 				<span class="col-sm-4" style="text-align: left;"><i class="fa-solid fa-user fa-sm"></i> NAME</span> 
 				<span class="col-sm-8">국윤재 (Kook Yun Jae)</span>
@@ -199,6 +264,9 @@
 	</div>
 
     <footer>
+		<h3 align="center"><i class="fa-solid fa-thumbs-up fa-flip-horizontal"></i>도움을 주신 분들<i class="fa-solid fa-thumbs-up fa-sm"></i></h3>
+		<p align="center"><a href="https://moozi.tistory.com"><img src="img/benner.png"></a></p>
+		<p align="center"><a href="http://www.gith.co.kr/"><img src="img/top_logo.png"></a></p>
 		<p align="center">점점 개선중.....</p>
 		<h5 align="center">이 웹사이트는 1920 * 1080이 매우 권장됩니다. </h5>
 	</footer>

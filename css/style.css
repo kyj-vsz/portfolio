@@ -6,32 +6,47 @@
     width: 100%;
     height: 100%;
 }
+small{
+    color:deepskyblue;
+}
 h1{
     font-family: 'Roboto Mono', monospace;
 }
 h2, h3{
     font-family: 'Titillium Web', sans-serif;
 }
+h5, p{
+    font-family: 'Play', sans-serif;
+}
 #navi{
     position: fixed;
     right: 0;
     z-index: 10000;
 }
-.main{
+.pic1, .pic2, .pic3{
     width:100%;
     height:900px;
+    background-position: center;
+    /* background-color: blue; */
 }
-#box1,#box2{
+#box1,#box2,#intro{
     /* background-color: blue; */
     width:100%;
     height: 540px;
     text-align: center;
 }
-#box3,#box4{
+#box3{
     width:1200px;
     height:540px;
     text-align: center;
     /* background-color: red; */
+}
+#box4{
+    width:100%;
+    height:540px;
+    text-align: center;
+    padding: 55px;
+    background-image: linear-gradient(135deg,silver,#d1bdbd,silver) ;
 }
 .col-sm-4{
     /* background-color: navy; */
