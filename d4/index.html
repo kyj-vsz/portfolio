@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework5-2</title>
+    <!-- 폰트 어섬 CDN -->
+    <script src="https://kit.fontawesome.com/f0a22c7bfb.js" crossorigin="anonymous"></script>
+     <!-- 프리픽스 프리 -->
+    <script type="text/javascript" src="js/prefixfree.min.js"></script>   
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        *{ 
+            box-sizing: border-box; 
+        }
+        body{
+            position:fixed;  width:100%; height:100%; background:#111;
+        }
+        ol,ul{
+            list-style: none;
+        }
+        a{
+            outline:0;
+            text-decoration:none;
+            color:#bbb;
+        }
+        /*  여기까지 CSS리셋 */
+        /* 배경동영상 */
+        .video-background {
+            background: #000;
+            position: fixed;
+            top: 0; 
+            right: 0; 
+            bottom: 0; 
+            left: 0;
+            z-index: -99;
+        }
+        .video-foreground,.video-background iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        @media (min-aspect-ratio: 16/9) {
+
+        .video-foreground { height: 300%; top: -100%; }
+
+        }
+
+        @media (max-aspect-ratio: 16/9) {
+
+        .video-foreground { width: 300%; left: -100%; }
+
+        }
+        /* 로고 */
+        h1{
+            position: fixed;
+            top:40px;
+            left:40px;
+            z-index:10;
+        }
+        h1 img{
+            width:280px;
+            height:auto;
+        }
+        header{
+            width: 700px;
+            height:100%;
+            position:fixed;
+            top:0px;
+            background:linear-gradient(-30deg,#ff0000, #8b0000, #000);
+            transform:skewX(-40deg);
+            left:-420px;
+        }
+        /* 글자부분 1depth */
+        #gnb{
+            width:200px;
+            position: absolute;
+            top:150px;
+            right:0px;            
+        }
+        #gnb>li{
+            position:relative;
+        }
+        #gnb>li>a{
+            display:block; 
+            width:220px; 
+            height:50px; 
+            font:bold 18px/3 Black And White Picture; 
+            color:#222;
+            box-sizing:border-box; 
+            padding-right:40px;
+            text-align:right;
+        }
+        #gnb em{
+            display:inline-block; 
+            transform:skewX(40deg)!important;
+        }
+        #gnb em i {
+            margin-right:20px;
+        }
+        #gnb>li.on>a{
+            background: #111; 
+            color:#fff;
+        }
+        #gnb>li:hover>a{
+            background: #111; 
+            color:#fff;
+        }
+        /* depth2 */
+        #gnb ul {
+            position: absolute;
+            left:0px;
+            top:0px;
+            opacity:0;
+            transition: 0.5s;
+        }
+        #gnb>li:hover ul{
+            opacity: 1;
+            left:220px;
+        }
+        #gnb ul a{
+            display:block;
+            width:150px;
+            height:40px;
+            background: #222;;
+            border-bottom:1px solid #8b0000;
+            font:bold 16px/2.5 Black And White Picture;
+            color:#fff;
+            box-sizing:border-box;
+            padding-left:50px; margin-bottom:3px;
+            transition: 0.5s;
+        }
+        #gnb ul a:hover{
+            background: #ff0000;
+            color:#333;
+        }
+        #gnb li.on ul{
+            opacity:0.8;
+            left:205px;
+            top:-10px;
+        }
+        #gnb li.on ul a{
+            background: #444;
+            opacity:0.7;
+        }
+        /* sns 버튼 */
+        #sns{
+            position:fixed;
+            top:60px;
+            right:50px;
+        }
+        #sns li{
+            display:inline;
+            padding:10px;
+            /* float:left;
+           margin-right:30px; */
+        }
+        #sns li .fa-brands{
+            color:#8b0000;
+            font-size:30px;
+            opacity:0.5;
+            transform: scale(1);
+            transition: 0.4s;
+
+        }
+        #sns li .fa-brands:hover{
+            transform: scale(1.5);
+            opacity:1;
+        }
+        
+        #side {
+            width:800px; 
+            height:100%; 
+            position:fixed; 
+            bottom:0px; 
+            right:-800px; 
+            background:#111; 
+            opacity:0.5; 
+            transform:skewX(-40deg); 
+            transition:all 0.5s;
+        }
+        #side:hover { 
+            right:-500px; 
+            opacity:0.8;
+        }
+        #side .con { 
+            width:400px; 
+            height:100%;
+            position:absolute; 
+            left:150px; 
+            bottom:0px; 
+            background:#8b0000; 	
+            box-sizing:border-box; 
+            padding:10px; 
+            transition:all  1s;
+        }
+        #side:hover .con { 
+            left:50px;
+        }
+        #side .con p { 
+            width: 300px; 
+            height:100px; 
+            position:absolute; 
+            left:50px;
+        }
+        #side .con p em { 
+            display:inline-block; 
+            font:bold 16px/1.7 Black And White Picture; 
+            color:#000; 
+            transform:skewX(40deg);
+        }
+        #side .con p img { 
+            width:300px; 
+            height:70px;
+            opacity:0.3; 
+            transition:all 0.5s;
+        }
+        #side .con p img:hover { 
+            opacity:1;
+        }
+        #side .con p:nth-child(1) {
+            bottom:270px; 
+            transform: translateX(200px); 
+            transition:all  0.4s;
+        }
+        #side .con p:nth-child(2) { 
+            bottom:160px; 
+            transform: translateX(200px); 
+            transition:all  0.8s;
+        }
+        #side .con p:nth-child(3) { 
+            bottom:50px; 
+            transform: translateX(200px); 
+            transition:all  1.2s;
+        }
+        #side:hover .con p { 
+            transform:translateX(0px);
+        }	
+        
+        /* 버튼 애니메이션 */
+        #side .btnContents{
+            width:150px;
+            height:50px;
+            position:absolute;
+            bottom:40px;
+            left:100px;
+            color:#df5c5c;
+            transition:skewX(40deg);
+        }
+        #side:hover .btnContents{
+            left:700px;
+        }
+        .btnContents i{
+            font-size:60px;
+            position:absolute;
+            bottom:0px;
+            right:0px;
+            opacity: 1;
+        }
+        .btnContents i:nth-child(1){ 
+            animation:ani linear 1.5s 0s infinite;
+        }
+        .btnContents i:nth-child(2){ 
+            animation:ani linear 1.5s 0.5s infinite;
+        }
+        .btnContents i:nth-child(3){ 
+            animation:ani linear 1.5s 1.0s infinite;
+        }
+
+        @keyframes ani {
+            0%{ right:0px; transform:scale(1); opacity: 1;}
+            100%{ right:100px; transform:scale(1.5); opacity: 0;}
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- 배경동영상 -->
+    <div class="video-background">
+        <div class="video-foreground">    
+            <iframe src="https://www.youtube.com/embed/WA989Zz6oSU?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&mute=1&playlist=WA989Zz6oSU" frameborder="0" allowfullscreen></iframe>
+        </div>    
+    </div>
+    <!-- 로고 -->
+    <h1><img src="img/d4-logo-002.webp" /></h1>
+    <!-- header -->
+    <header>
+        <ul id="gnb">
+            <!-- on은 현재 페이지를 나타낸다. -->
+            <li class="on">
+                <a href="#"><em><i class="fa fa-refresh fa-spin"></i>개요</em></a>
+                <ul>
+                    <li><a href="#"><em><strong>경배하라</strong></em></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><em>이야기</em></a>
+                <ul>
+                    <li><a href="#"><em>준비중</em></a></li>
+                    <li><a href="#"><em>준비중</em></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><em>세계</em></a>
+                <ul>
+                    <li><a href="#"><em>준비중</em></a></li>
+                    <li><a href="#"><em>준비중</em></a></li>
+                    <li><a href="#"><em>준비중</em></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><em>직업</em></a>
+                <ul>
+                    <li><a href="#"><em>준비중</em></a></li>
+                    <li><a href="#"><em>준비중</em></a></li>
+                    <li><a href="#"><em>준비중</em></a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"><em>토론장</em></a>
+                <ul>
+                    <li><a href="#"><em>준비중</em></a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <!-- sns 버튼 -->
+    <ul id="sns">
+        <li><a href="#"><i class="fa-brands fa-battle-net"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+    </ul>
+    <!-- 하단 컨텐츠박스 -->
+	<section id="side">
+		<div class="con">
+			<p>
+				<em>이벤트</em>
+				<a href="#"><img src="img/event.png" /></a>				
+			</p>
+			<p>
+				<em>새소식 & 패치노트</em>
+				<a href="#"><img src="img/notice.png" /></a>				
+			</p>
+			<p>
+				<em>제품구매</em>
+				<a href="#"><img src="img/d4-deluxe-edition.webp" /></a>				
+			</p>		
+		</div>	
+    
+        <!-- 자동롤링 버튼 -->
+        <div class="btnContents">
+            <i class="fa fa-angle-double-left"></i>
+            <i class="fa fa-angle-double-left"></i>
+            <i class="fa fa-angle-double-left"></i>       
+        </div>
+    </section>
+</body>
+</html>

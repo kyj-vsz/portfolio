@@ -2,6 +2,9 @@
     margin :0;
     padding :0;
 }
+body{
+    background-image: linear-gradient(120deg,silver,#d1bdbd,silver);
+}
 #top{
     width: 100%;
     height: 100%;
@@ -11,12 +14,14 @@ small{
 }
 h1{
     font-family: 'Roboto Mono', monospace;
+    font-size: 35px;
 }
 h2, h3{
     font-family: 'Titillium Web', sans-serif;
 }
 h5, p{
     font-family: 'Play', sans-serif;
+    font-size: 16px;
 }
 #navi{
     position: fixed;
@@ -25,7 +30,7 @@ h5, p{
 }
 .pic1, .pic2, .pic3{
     width:100%;
-    height:900px;
+    height:600px;
     background-position: center;
     /* background-color: blue; */
 }
@@ -36,7 +41,7 @@ h5, p{
     text-align: center;
 }
 #box3{
-    width:1200px;
+    width:100%;
     height:540px;
     text-align: center;
     /* background-color: red; */
@@ -46,7 +51,6 @@ h5, p{
     height:540px;
     text-align: center;
     padding: 55px;
-    background-image: linear-gradient(135deg,silver,#d1bdbd,silver) ;
 }
 .col-sm-4{
     /* background-color: navy; */
