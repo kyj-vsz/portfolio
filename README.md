@@ -1,4 +1,4 @@
-# portpolio
+# portfolio
 
 연습겸 포트폴리오용 단일 웹페이지 입니다.
 
