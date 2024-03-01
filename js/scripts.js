@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Activate SimpleLightbox plugin for portfolio items
     new SimpleLightbox({
-        elements: '#portfolio a#videosample'
+        elements: '#portfolio a#videosample, #portfolio a#mvc'
     });
 
     new SimpleLightbox({
